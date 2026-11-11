@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monster Hunter Database</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span>MONSTER</span> HUNTER
+        </div>
+
+        <p>BESTIARY DATABASE</p>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p class="subtitle">ENCICLOPEDIA DE MONSTRUOS</p>
+
+            <h1>MONSTER HUNTER</h1>
+
+            <p class="description">
+                Explorá el mundo y descubrí las criaturas
+                que habitan en él.
+            </p>
+        </section>
+
+        <section class="database">
+
+            <div class="section-title">
+                <div>
+                    <h2>Bestiario</h2>
+                    <p>Monstruos registrados en la base de datos</p>
+                </div>
+
+                <span id="monster-count">Cargando...</span>
+            </div>
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Buscar monstruo..."
+                >
+
+                <select id="category-filter">
+                    <option value="all">Todas las categorías</option>
+                </select>
+
+            </div>
+
+            <div id="loading" class="message">
+                Cargando monstruos...
+            </div>
+
+            <div id="error" class="message error hidden">
+                No se pudieron cargar los monstruos.
+            </div>
+
+            <div id="monster-container" class="monster-grid">
+            </div>
+
+            <div id="no-results" class="message hidden">
+                No se encontraron monstruos.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MONSTER HUNTER DATABASE</p>
+        <span>Proyecto educativo utilizando una API pública.</span>
+    </footer>
+
+    <!-- Ventana de información -->
+
+    <div id="monster-modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button id="close-modal" class="close-button">
+                &times;
+            </button>
+
+            <div id="modal-body"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
